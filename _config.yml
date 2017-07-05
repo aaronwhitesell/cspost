@@ -1,0 +1,22 @@
+title:            CSPost
+description:      Write, build, and view a post without a local Jekyll install.
+url:              https://aaronwhitesell.github.io
+baseurl:          /cspost
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+sass:
+  style: compressed
+
+permalink: /:categories/:year-:month-:day/:title.html
+
+# Amount of post to show on home page
+paginate: 5
+
+exclude:
+  - .sass-cache
+  - LICENSE
+  - README.md
+  - raw-assets/

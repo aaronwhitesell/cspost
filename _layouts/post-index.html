@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<header>
+
+    {% include nav-primary.html %}
+
+    {% include banner.html %}
+
+    {% include nav-blog.html %}
+
+</header>
+
+<!-- BODY -->
+<body id="post-index">
+    {% include browser-upgrade.html %}
+
+    <!-- MAIN -->
+    <div id="main" role="main">
+        {{ content }}
+    </div>
+</body>

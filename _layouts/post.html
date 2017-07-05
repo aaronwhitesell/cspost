@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<header>
+
+    {% include nav-primary.html %}
+
+    {% include banner.html %}
+
+    {% include nav-blog.html %}
+
+</header>
+
+<!-- BODY -->
+<body id="post-index">
+    {% include browser-upgrade.html %}
+
+    <div id="main" role="main">
+        <article class="hentry">
+
+            <!-- MAIN -->
+            <h1 class="entry-title">
+                {{ page.title }}
+            </h1>
+            <hr>
+
+            <!-- POST CONTENT -->
+            <div class="entry-content">
+                {{ page.content }}
+            </div>
+
+            <!--- DIVIDING LINE -->
+            <hr>
+
+            <!-- POST TAGS -->
+            <div class="inline-tags">
+                <span>
+                    {% for tag in page.tags %}
+                        <a href="{{ site.baseurl }}/tags/#{{tag}}">#{{ tag }}</a>&nbsp;&nbsp;&nbsp;
+                    {% endfor %}
+                </span>
+            </div>
+
+            <br>
+
+            <!-- POST DATE -->
+            <div class="post-date">
+                {{ page.date-string }}
+            </div>
+        </article>
+    </div>
+</body>

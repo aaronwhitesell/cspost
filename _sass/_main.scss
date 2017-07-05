@@ -1,0 +1,316 @@
+/*--- LINKS -----------------------------------------------------------------*/
+
+a {
+	text-decoration: none;
+	color: $link-color; 
+
+	&:visited { 
+		color: $visited-color;
+	}
+
+	&:hover,
+    &:active { 
+		text-decoration: underline;
+	}
+
+    &:active {
+        cursor: default;
+    }
+}
+
+/*--- BLOCKQUOTE ------------------------------------------------------------*/
+
+blockquote {
+    border-left: 4px solid $border-color;
+    font-size: 14px;
+    font-family: $alt-font;
+    margin-left: 1em;
+    margin-right: 5em;
+    padding-left: 15px;
+    line-height: 22px;
+}
+
+/*--- CODE FORMAT -----------------------------------------------------------*/
+
+tt, code, kbd, samp, pre {
+	font-family: $code-font;
+}
+
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+    margin: 0 2px;
+	padding: 0 5px;
+    font-size: 12px;
+	line-height: 1.5;
+    border: 1px solid lighten(#000, 90);
+	background-color: lighten(#000, 95);
+	border-radius: 3px;
+}
+
+pre {
+    font-size: 12px;
+	line-height: 1.5;
+	overflow-x: auto;
+
+	&::-webkit-scrollbar {
+		height: 12px;
+		background-color: #34362e;
+		border-radius: 0 0 4px 4px;
+	}
+
+	&::-webkit-scrollbar-thumb:horizontal {
+		background-color: #6a6d5d;
+		border-radius: 4px;
+	}
+}
+
+/*--- DIVIDING LINE ---------------------------------------------------------*/
+
+hr { 
+    display: block; 
+    margin: 1em 0 1.5em; 
+    padding: 0;
+    height: 1px; 
+    border: 0; 
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #fff; 
+}
+
+/*--- FIGURES & IMAGES ------------------------------------------------------*/
+
+figure {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  img {
+    margin-bottom: 0px;
+  }
+}
+
+svg:not(:root) {
+  overflow: hidden; 
+}
+
+/*--- PAGINATION ------------------------------------------------------------*/
+
+.pagination {
+    word-spacing: 10px;
+}
+
+/*--- EQUATIONS -------------------------------------------------------------*/
+
+.has-jax {
+    font: inherit; 
+    font-size: 100; 
+    background: inherit; 
+    border: inherit;
+    color: #006699;
+}
+
+/*--- PRIMARY NAVIGATION BAR --------------------------------------------------------*/
+
+.nav-primary 
+{
+    ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        font-family: $base-font;
+        font-size: 18px;
+        height: 36px;
+        line-height: 36px;
+        border-bottom: 1px solid $border-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: $black;
+        display: block;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover,
+        &:active  {
+            background-color: $banner-color;
+            color: $white;
+        }
+
+        &:active {
+            cursor: default;
+        }
+    }
+
+    @media screen and (min-width: 935px) {
+        li {
+            width: 130px;
+            border-bottom: none;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        a {
+            border-radius: 0.3em;
+        }
+    }
+}
+
+/*--- BLOG NAVIGATION BAR --------------------------------------------------------*/
+
+.nav-blog {
+    a {
+        text-decoration: none;
+        color: $black;
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 0.3em;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+            background-color: $banner-color;
+            color: $white;
+        }
+    }
+}
+
+/*--- TAGS ------------------------------------------------------------------*/
+
+.inline-tags {
+    font-size: 14px;
+}
+
+/*--- MAIN CONTENT ----------------------------------------------------------*/
+
+.entry-content {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.entry-title {
+    font-weight: 400;
+}
+
+.main-header-image {
+    img {
+        @media #{$medium} {
+            margin-left: 20px;
+			margin-right: 20px;
+		}
+
+		@media #{$large} {
+			max-width: $column-width;
+		}
+    }
+    
+    img:hover {
+        opacity: 0.9;
+    }
+}
+
+.post-date {
+    font-size: 12px;
+	text-transform: uppercase;
+    color: lighten($base-color,50);
+}
+
+header .entry-meta {
+	display: none; // hide header meta on small screens
+
+	@media #{$medium} {
+		display: block;
+	}
+}
+
+/*--- POST INDEX ------------------------------------------------------------*/
+
+#post-index {
+	#main {
+		margin: 40px 2px 20px 2px;
+
+		@media #{$medium} {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+
+		@media #{$large} {
+			max-width: $column-width;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	article {
+		background-color: $white;
+		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.1);
+		border-radius: 3px;
+		margin-bottom: 20px;
+		padding: 25px 15px;
+
+		@media #{$medium} {
+			padding: 30px;
+		}
+
+		@media #{$large} {
+			margin-bottom: 30px;
+			padding: 50px 80px;
+		}
+        
+        a { 
+            img:hover {
+                opacity: 0.9;
+            }
+        }
+        
+	}
+}
+
+/*--- FOOTER ----------------------------------------------------------------*/
+
+.footer-wrapper {
+    margin: 2em auto;
+    text-align: center;
+    color: lighten($black,20);
+    font-size: 14px;
+}
+
+/*--- BROWSER UPGRADE -------------------------------------------------------*/
+
+.upgrade {
+	padding: 10px;
+	text-align: center;
+}
+
+/*--- BODY ------------------------------------------------------------------*/
+
+body {
+    font-family: $base-font;
+    color: $black;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: $body-color;
+    font-size: 0px + $doc-font-size;
+}
+
+/*--- HEADINGS --------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+}
+
+h1 {
+	@media #{$medium} {
+        font-size: 32px;
+	}
+}
