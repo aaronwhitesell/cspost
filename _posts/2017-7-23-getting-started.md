@@ -24,7 +24,7 @@ CSPro Help is an excellent resource whether you're just getting started or an ex
 * [Alphabetical List of Statements and Functions](http://www.csprousers.org/help/CSPro/logic_alphabetical_list.html){:target="_blank"}
 
 ## CSPro Examples
-CSPro Examples are a collection of data entry, edits & batch, and tabulation projects. Some projects are standalone while others simply demonstrate common techniques. Here you can see how the developers of CSPro design and code their applications. Plus, feel free to reuse anything in these projects. The examples are an optional install with CSPro 7.0 and up. If selected they'll be installed to your **Documents** folder under **CSPro**. With older versions you'll find them in **your instalation folder** under **Examples**.
+CSPro Examples are a collection of data entry, edits & batch, and tabulation projects. Some projects are standalone while others simply demonstrate common techniques. Here you can see how the developers of CSPro design and code their applications. Plus, feel free to reuse anything in these projects. The examples are an optional install with CSPro 7.0 and up. If selected they'll be installed to your **Documents** folder under **CSPro**. With older versions you'll find them in **your installation folder** under **Examples**.
 
 ## Debugging
 ### Use of errmsg and trace
@@ -72,7 +72,7 @@ There are two ways of contacting us. Either through email at cspro@lists.census.
 * If necessary include just enough code to reproduce issue
     * This may be a snippet of code or a simplified application (don't send your entire application)
     * To prepare projects for attachment use CSPack (Tools > Pack Application)
-* If nesessary attach log files
+* If necessary attach log files
     * sync.log, api.log, or ui.log
 * Proof-read, is everything clear?
 * Finally, be prepared to answer follow-up questions
