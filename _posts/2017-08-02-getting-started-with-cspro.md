@@ -24,7 +24,7 @@ CSPro Help is an excellent resource whether you are just getting started or an e
 * [Alphabetical List of Statements and Functions](http://www.csprousers.org/help/CSPro/logic_alphabetical_list.html){:target="_blank"}
 
 ## CSPro Examples
-CSPro Examples are a collection of data entry, edits & batch, and tabulation projects. Some projects are standalone, while others simply demonstrate common techniques. Here, you can see how the developers of CSPro design and code their applications. Feel free to reuse anything you see in these projects in your own project. The examples are an optional install. If selected they will be installed to your **Documents** folder under **CSPro**.
+CSPro Examples are a collection of data entry, edits & batch, and tabulation projects. Some projects are standalone, while others simply demonstrate common techniques. Here, you can see how the developers of CSPro design and code their applications. Feel free to use anything you see in these projects in your own project. The examples are an optional install. If selected they will be installed to your **Documents** folder under **CSPro**.
 
 ## Debugging
 ### Use of errmsg and trace
@@ -78,6 +78,7 @@ Specifics of every synchronization will be written to the sync log. Depending on
 CSWeb makes use of two log files. These logs will only exist if you are using CSWeb:
 * csweb\logs\api.log
 * csweb\logs\ui.log
+
 The API log records details related to the underlying RESTful API, while the UI log records actions related the navigation of the website.
 
 ## Forum/Email
