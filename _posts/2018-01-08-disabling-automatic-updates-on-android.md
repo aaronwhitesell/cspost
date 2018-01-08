@@ -6,7 +6,7 @@ tags: [Android, CSEntry]
 date-string: January 8, 2018
 ---
 
-Before sending interviewers into the field, consider what would happen if CSEntry automatically updated during your survey. If you developed a CSPro application for a previous version or the current version of CSEntry, you may not want the next update. Fortunately, it is simple to disable automatic updates on Android.
+Before sending interviewers into the field, consider what would happen if CSEntry automatically updated during your survey. If you developed a CSPro application for a previous version or the current version of CSEntry, you may not want the next update. Fortunately, it is simple to disable automatic updates for CSEntry or all apps on Android.
 
 ## Disable automatic updates for CSEntry
 1. Open the Google Play Store ![alt text]({{ site.baseurl }}/images/posts/2018-01-08/google-play.png "Google Play").
