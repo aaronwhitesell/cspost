@@ -17,6 +17,6 @@
     * ```date-string: JUNE 30, 2017```
     * ```---```
 5. Next, write the contents of your blog entry using markdown. The "Example Post" makes a good markdown reference.
-6. If your post includes images, add the image files to "images\posts\YYYY-MM-DD-name-of-blog\" using the same name you used for your post (minus the extension)
+6. If your post includes images, add the image files to "images\posts\YYYY-MM-DD\" (ideally, each blog entry has its own folder)
 7. Push your post to the repository. This will trigger a build and your post will be viewable at [https://aaronwhitesell.github.io/cspost/](https://aaronwhitesell.github.io/cspost/). From my experience your post should be viewable in less than a minute.
 8. As a final step your post will be moved to the official blog
