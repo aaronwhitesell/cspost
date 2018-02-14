@@ -10,7 +10,7 @@ date-string: August 2, 2017
 Download the latest versions of [CSPro, CSEntry, and CSWeb](https://www.census.gov/data/software/cspro.Download.html){:target="_blank"}.
 Watch
 [CSPro videos](https://www.census.gov/data/software/cspro.Videos.html){:target="_blank"} and learn about upcoming
-[U.S. Census Bureau workshops](https://www.census.gov/data/training-workshops.html){:target="_blank"}.
+[U.S. Census Bureau workshops](https://www.census.gov/programs-surveys/international-programs/events/workshops.html){:target="_blank"}.
 
 ## CSPro Help
 CSPro Help is an excellent resource whether you are just getting started or an expert user. The help is available offline with an installation of
