@@ -65,7 +65,7 @@ Let us write a regular expression that describes a telephone in the following fo
 #### Step 7
 
 <div class="text-bubble">
-    <div class="header"><span class="highlight1">123-456-7890</span></div>
+    <div class="header">Test String: <span class="highlight1">123-456-7890</span></div>
     <div class="body">Finally, end your regular expression by asserting its position at the end of a newline. This will keep your phone number from matching something like 123-456-7890otherData.</div>
     <div class="header">^([0-9]{3}-){2}[0-9]{4}$</div>
 </div>
