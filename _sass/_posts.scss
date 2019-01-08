@@ -1,0 +1,43 @@
+/*--- Text bubble -----------------------------------------------------------------*/
+
+.text-bubble {
+    margin: 0px; padding: 1em; 
+    border-radius: 3px;
+    line-height: 20px;
+    font-size: 10pt;
+    //color: rgb(51, 51, 51);
+    background-color: rgb(232, 232, 232);
+
+    .header {
+        color: rgb(82, 107, 153);
+        font-weight: bold;
+    }
+
+    .body {
+        margin: 0px; padding: 0.5em; 
+    }
+
+    .highlight1 {
+        background-color: rgb(194, 215, 218);
+    }
+    .highlight2 {
+        background-color: rgb(57, 255, 20);
+    }
+}
+
+.logic-variable {
+    font-family: 'Inconsolata', monospace; font-size: 10pt;
+    //color: #333;
+}
+
+.logic-keyword {
+    font-family: 'Inconsolata', monospace; font-size: 10pt;
+    color: blue;
+}
+
+.logic-numeric {
+    font-family: 'Inconsolata', monospace; font-size: 10pt;
+    color: red;
+}
+
+
