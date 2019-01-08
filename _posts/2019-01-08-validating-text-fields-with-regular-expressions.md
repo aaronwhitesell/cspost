@@ -8,7 +8,7 @@ date-string: JANUARY 8, 2019
 
 There are many ways of formatting the text data you collect in a CSPro application. For example, in the United States it is common to write a telephone number as xxx-xxx-xxxx or (xxx) xxx-xxxx. If only a text field is used, the interviewer could enter either format. However, not knowing the format creates extra work post-data collection, so as the application developer you will want to accept a single format.
 
-This is done using the [regexmatch](http://www.csprousers.org/help/CSPro/regexmatch_function.html){:target="_blank"} function which was introduced in [CSPro 7.2](http://www.csprousers.org/help/CSPro/what_is_new_in_cspro_7_2.html). The function takes two strings, the input text and a regular expression and returns if there is a match. The input text is the telephone number and the regular expression describes the valid variations of the telephone number.
+This is done using the [regexmatch](http://www.csprousers.org/help/CSPro/regexmatch_function.html){:target="_blank"} function which was introduced in [CSPro 7.2](http://www.csprousers.org/help/CSPro/what_is_new_in_cspro_7_2.html){:target="_blank"}. The function takes two strings, the input text and a regular expression and returns if there is a match. The input text is the telephone number and the regular expression describes the valid variations of the telephone number.
 
 Regular expressions have their own syntax separate from CSPro logic. To help write your regular expression you can use any regular expression editor that supports the ECMAScript (JavaScript) engine (or flavor).
 
