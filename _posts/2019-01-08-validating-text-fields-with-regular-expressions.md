@@ -8,12 +8,12 @@ date-string: JANUARY 8, 2019
 
 There are many ways of formatting the text data you collect in a CSPro application. For example, in the United States it is common to write a telephone number as xxx-xxx-xxxx or (xxx) xxx-xxxx. If only a text field is used, the interviewer could enter either format. However, not knowing the format creates extra work post-data collection, so as the application developer you will want to accept a single format.
 
-This is done using the [regexmatch](http://www.csprousers.org/help/CSPro/regexmatch_function.html){:target="_blank"} function which was introduced in [CSPro 7.2](http://www.csprousers.org/help/CSPro/what_is_new_in_cspro_7_2.html){:target="_blank"}. The function takes two strings, the input text and a regular expression and returns 1 if there is a match. The input text is the telephone number and the regular expression describes the valid variations of the telephone number.
+This is done using the [regexmatch](http://www.csprousers.org/help/CSPro/regexmatch_function.html){:target="_blank"} function which was introduced in [CSPro 7.2](http://www.csprousers.org/help/CSPro/what_is_new_in_cspro_7_2.html){:target="_blank"}. The function takes two strings, the target and a regular expression and returns whether there is a match or not. In this example, the target string is the telephone number and the regular expression string describes the valid variations of the telephone number.
 
 Regular expressions have their own syntax separate from CSPro logic. To help write your regular expression you can use any regular expression editor that supports the ECMAScript (JavaScript) engine (or flavor).
 
 ## Writing a Regular Expression
-Let us write a regular expression that describes a telephone number in the following format: xxx-xxx-xxxx. We will use the online regular expression editor [regex101](https://regex101.com/){:target="_blank"}, just make sure to select ECMAScript as the flavor. Start by typing the phone number 123-456-7890 into the test string field. As we write the regular expression step-by-step, you will notice that the test string is highlighted as it is described by the regular expression.
+Let us write a regular expression that describes a telephone number in the following format: xxx-xxx-xxxx. We will use the online regular expression editor [regex101](https://regex101.com/){:target="_blank"}, make sure to select ECMAScript as the flavor. Start by typing the phone number 123-456-7890 into the test string field. As you write the regular expression, you will notice that the test string is highlighted as it is described by the regular expression.
 
 #### Step 1
 ![alt text]({{ site.baseurl }}/images/posts/2019-01-08/step-1-regex101.png "Step 1")
@@ -44,7 +44,7 @@ Let us write a regular expression that describes a telephone number in the follo
 <div>Finally, end your regular expression by asserting its position at the end of a newline. This will keep your phone number from matching something like 123-456-7890otherData.</div>
 
 ## Validating a Text Field
-With your regular expression in hand, you are ready to validate the telephone number in CSPro. In the <span class="logic-keyword">postproc</span> of the telephone number's <span class="logic-keyword">PROC</span> assign the regular expression you created above to a string variable named <span class="logic-variable">regex</span>. Call <span class="logic-keyword">regexmatch</span> passing in the telephone number and the regular expression. If <span class="logic-numeric">0</span> is returned then display an error message and re-enter. This allows the interviewer to correct the telephone number. Otherwise, if <span class="logic-numeric">1</span> is returned, do nothing and let the interview continue.
+With your regular expression in hand, you are ready to validate the telephone number in CSPro. In the postproc of the telephone number's PROC assign the regular expression you created above to a string variable named regex. Call regexmatch passing in the telephone number and the regular expression. If 0 is returned then display an error message and re-enter. This allows the interviewer to correct the telephone number. Otherwise, if 1 is returned, do nothing and let the interview continue.
 
 <div style="margin: 0px; padding: 1em; 
             border-radius: 3px;
