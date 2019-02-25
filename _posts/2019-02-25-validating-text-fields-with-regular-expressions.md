@@ -3,7 +3,7 @@ layout: post
 categories: posts
 title: "Validating Text Fields with Regular Expressions"
 tags: [Logic]
-date-string: JANUARY 8, 2019
+date-string: FEBRUARY 25, 2019
 ---
 
 There are many ways of formatting the text data you collect in a CSPro application. For example, in the United States it is common to write a telephone number as xxx-xxx-xxxx or (xxx) xxx-xxxx. If only a text field is used, the interviewer could enter either format. However, not knowing the format creates extra work post-data collection, so as the application developer you will want to accept a single format.
@@ -44,7 +44,7 @@ Let us write a regular expression that describes a telephone number in the follo
 <div>Finally, end your regular expression by asserting its position at the end of a newline. This will keep your phone number from matching something like 123-456-7890otherData.</div>
 
 ## Validating a Text Field
-With your regular expression in hand, you are ready to validate the telephone number in CSPro. In the postproc of the telephone number's PROC assign the regular expression you created above to a string variable named regex. Call regexmatch passing in the telephone number and the regular expression. If 0 is returned then display an error message and re-enter. This allows the interviewer to correct the telephone number. Otherwise, if 1 is returned, do nothing and let the interview continue.
+With your regular expression in hand, you are ready to validate the telephone number in CSPro. Call regexmatch passing in the telephone number and the regular expression. If 0 is returned then display an error message and re-enter. This allows the interviewer to correct the telephone number. Otherwise, if 1 is returned, do nothing and let the interview continue.
 
 <div style="margin: 0px; padding: 1em; 
             border-radius: 3px;
@@ -56,12 +56,11 @@ With your regular expression in hand, you are ready to validate the telephone nu
     <br>
     <font color="blue">postproc</font><br>
     <br>
-    &nbsp; &nbsp; <font color="blue">string</font>&nbsp;regex &nbsp;= <font color="fuchsia">"^([0-9]{3}-){2}[0-9]{4}$"</font>;<br>
-    <br>
-    &nbsp; &nbsp; <font color="blue">if</font>&nbsp;<font color="blue">regexmatch</font>(TELEPHONE_NUMBER, regex) = <font color="red">0</font>&nbsp;<font color="blue">then</font><br>
+    &nbsp; &nbsp; <font color="blue">if</font>&nbsp;<font color="blue">regexmatch</font>(TELEPHONE_NUMBER,
+    <font color="fuchsia">"^([0-9]{3}-){2}[0-9]{4}$"</font>) = <font color="red">0</font>&nbsp;<font color="blue">then</font><br>
     &nbsp; &nbsp; &nbsp; &nbsp; <font color="blue">errmsg</font>(<font color="fuchsia">"Invalid format! Use the following format: xxx-xxx-xxxx."</font>);<br>
     &nbsp; &nbsp; &nbsp; &nbsp; <font color="blue">reenter</font>;<br>
     &nbsp; &nbsp; <font color="blue">endif</font>;
 </div>
 
-To see a complete example, download the [regexmatch application]({{ site.baseurl }}/downloads/posts/regexmatch.zip).
+To see a working example, download the [regexmatch application]({{ site.baseurl }}/downloads/posts/regexmatch.zip).
