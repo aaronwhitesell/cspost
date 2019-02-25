@@ -16,31 +16,31 @@ Regular expressions have their own syntax separate from CSPro logic. To help wri
 Let us write a regular expression that describes a telephone number in the following format: xxx-xxx-xxxx. We will use the online regular expression editor [regex101](https://regex101.com/){:target="_blank"}, make sure to select ECMAScript as the flavor. Start by typing the phone number 123-456-7890 into the test string field. As you write the regular expression, you will notice that the test string is highlighted as it is described by the regular expression.
 
 #### Step 1
-![alt text]({{ site.baseurl }}/images/posts/2019-01-08/step-1-regex101.png "Step 1")
+![alt text]({{ site.baseurl }}/images/posts/2019-02-25/step-1-regex101.png "Step 1")
 <div>Begin your regular expression by asserting its position at the start of a newline. This will keep your phone number from matching something like otherData123-456-7890.</div>
 
 #### Step 2
-![alt text]({{ site.baseurl }}/images/posts/2019-01-08/step-2-regex101.png "Step 2")
+![alt text]({{ site.baseurl }}/images/posts/2019-02-25/step-2-regex101.png "Step 2")
 <div>The first character is any number from 0 to 9.</div>
 
 #### Step 3
-![alt text]({{ site.baseurl }}/images/posts/2019-01-08/step-3-regex101.png "Step 3")
+![alt text]({{ site.baseurl }}/images/posts/2019-02-25/step-3-regex101.png "Step 3")
 <div>The following two characters are also any numbers from 0 to 9. Signal that the pattern will repeat three times.</div>
 
 #### Step 4
-![alt text]({{ site.baseurl }}/images/posts/2019-01-08/step-4-regex101.png "Step 4")
+![alt text]({{ site.baseurl }}/images/posts/2019-02-25/step-4-regex101.png "Step 4")
 <div>The next character is a hyphen, and will match nothing else, so enter the literal hyphen character.</div>
 
 #### Step 5
-![alt text]({{ site.baseurl }}/images/posts/2019-01-08/step-5-regex101.png "Step 5")
+![alt text]({{ site.baseurl }}/images/posts/2019-02-25/step-5-regex101.png "Step 5")
 <div>Notice the pattern of the next four characters is the same as the past four. Wrap everything, but the caret in parentheses to create a capture group and signal that the pattern will repeat two times.</div>
 
 #### Step 6
-![alt text]({{ site.baseurl }}/images/posts/2019-01-08/step-6-regex101.png "Step 6")
+![alt text]({{ site.baseurl }}/images/posts/2019-02-25/step-6-regex101.png "Step 6")
 <div>The last four characters are any numbers from 0 to 9. Signal that the pattern will repeat four times.</div>
 
 #### Step 7
-![alt text]({{ site.baseurl }}/images/posts/2019-01-08/step-7-regex101.png "Step 7")
+![alt text]({{ site.baseurl }}/images/posts/2019-02-25/step-7-regex101.png "Step 7")
 <div>Finally, end your regular expression by asserting its position at the end of a newline. This will keep your phone number from matching something like 123-456-7890otherData.</div>
 
 ## Validating a Text Field
