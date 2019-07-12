@@ -3,14 +3,14 @@ layout: post
 categories: posts
 title: "Dynamic Value Sets With the New ValueSet Object"
 tags: [Logic]
-date-string: JUNE 3, 2019
+date-string: JULY 12, 2019
 ---
 
 CSPro 7.3 introduces new ways to work with dynamic value sets. Dynamic value sets define the acceptable options for a field and they vary based on responses previously given. Typical value sets, defined in the data dictionary, define a fixed set of responses for a field, but with a dynamic value set, you can customize these responses based on specific conditions.
 
 Prior to CSPro 7.3, you could create dynamic value sets using arrays, but working with these was cumbersome and not intuitive. Now there is a valueset object that allow for simpler, and more sophisticated, value set creation. Four scenarios are presented below that show how to use the new valueset object.
 
-#### Easily Create a Dynamic Value Set in a Loop
+## Easily Create a Dynamic Value Set in a Loop
 
 A typical task is to create a value set based on some attributes entered previously. For example, you might want to present a list of people in a household who are aged 15+ as eligible heads of household. Using the valueset object with a **for** loop with a **where** condition makes this task trivial:
 
@@ -29,7 +29,7 @@ A typical task is to create a value set based on some attributes entered previou
 </div>
 
 
-#### Combining Value Sets
+## Combining Value Sets
 
 Suppose you have a question that asks about the way that someone deceased. In the dictionary there is one set of responses that applies to all people and an additional set of responses that applies to females aged 12+. Now you can easily create a dynamic value set, conditionally adding the female aged 12+ responses:
 
@@ -48,7 +48,7 @@ Suppose you have a question that asks about the way that someone deceased. In th
 </div>
 
 
-#### Removing a Value Based on a Previous Selection
+## Removing a Value Based on a Previous Selection
 
 Sometimes a questionnaire has a series of questions that asks about preferences, such as, "What is your favorite color?," and then, "What is your second favorite color?" The list of options for the second question can exclude the selected answer to the first question. The valueset object makes this task very easy:
 
@@ -65,7 +65,7 @@ Sometimes a questionnaire has a series of questions that asks about preferences,
 </div>
 
 
-#### Iterate Through Value Set Codes and Labels
+## Iterate Through Value Set Codes and Labels
 
 Finally, there are two lists that are part of a value set, accessed using the **codes** and **labels** attributes. Just as valueset is a new object in CSPro 7.3, lists, though around in some form for years, are now fully useable objects. This simplifies iterating through the codes and labels of a value set. For example, if the first two digits of the county code are equal to the state code, a dynamic value set for counties could be created as follows:
 
