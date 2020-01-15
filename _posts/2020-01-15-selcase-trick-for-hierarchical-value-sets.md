@@ -6,10 +6,7 @@ tags: [Logic]
 date-string: JANUARY 15, 2020
 ---
 
-The [selcase](http://www.csprousers.org/help/CSPro/selcase_function.html) ("select case") function is used to display a list of
-cases in an external dictionary, letting an interviewer select a case to load. One function not mentioned in that page's help documentation
-is the ability for the user to select multiple cases. By using the **multiple** keyword, the interviewer  can select more than one case and then iterate
-over each of those cases using a [for loop](https://www.csprousers.org/help/CSPro/for_dict_statement.html).
+The [selcase](http://www.csprousers.org/help/CSPro/selcase_function.html){:target="_blank"} ("select case") function is used to display a list of cases in an external dictionary, letting an interviewer select a case to load. One function not mentioned in that page's help documentation is the ability for the user to select multiple cases. By using the **multiple** keyword, the interviewer  can select more than one case and then iterate over each of those cases using a [for loop](https://www.csprousers.org/help/CSPro/for_dict_statement.html){:target="_blank"}.
 
 An undocumented feature allows for all qualified cases to be automatically marked. Using the **automark** keyword, the
 selcase dialog is not shown to the interviewer. These two sets of code are the same:
@@ -31,12 +28,9 @@ selcase dialog is not shown to the interviewer. These two sets of code are the s
 </font><font color="blue">endfor</font><font color="black">;</font>
 </div>
 
-Because selcase allows you to pass a key to match ("" in the example above, which means all case keys), you can use this as a trick to efficiently create
-value sets if you know what part of the key is. For example, if you have a data file with 50,000 cases, forcase will always loop through all 50,000 cases,
-whereas providing a key match may limit your loop to substantially fewer cases.
+Because selcase allows you to pass a key to match ("" in the example above, which means all case keys), you can use this as a trick to efficiently create value sets if you know what part of the key is. For example, if you have a data file with 50,000 cases, forcase will always loop through all 50,000 cases, whereas providing a key match may limit your loop to substantially fewer cases.
 
-To show a possible use for this trick, we will look at two ways of creating hierarchical value sets for geocodes. Supposing we have three
-levels of geography&mdash;Region, District, and EA&mdash;one way to structure a geocode lookup file is as follows:
+To show a possible use for this trick, we will look at two ways of creating hierarchical value sets for geocodes. Supposing we have three levels of geography&mdash;Region, District, and EA&mdash;one way to structure a geocode lookup file is as follows:
 
 | Region | District | EA  | Geocode Name |
 | ------ | -------- | --- | ------------ |
@@ -46,8 +40,7 @@ levels of geography&mdash;Region, District, and EA&mdash;one way to structure a 
 
 That is, when defining regions, the district and EA codes are left blank, and when defining districts, the EA code is left blank.
 
-Using a forcase loop to populate the districts based on a selected region, we would loop over the entire data file, filtering on
-cases where the geocode region matches the selected region, where the geocode district is defined, but where the geocode EA is blank:
+Using a forcase loop to populate the districts based on a selected region, we would loop over the entire data file, filtering on cases where the geocode region matches the selected region, where the geocode district is defined, but where the geocode EA is blank:
 
 <div style="margin: 0px; padding: 1em; border-radius: 3px; line-height: 1.5; font-family: 'Inconsolata', monospace; font-size: 10pt; color: rgb(51, 51, 51); background-color: rgb(232, 232, 232);">
     <font color="blue">PROC </font><font color="black">DISTRICT<br />
@@ -68,9 +61,7 @@ cases where the geocode region matches the selected region, where the geocode di
 </font>
 </div>
 
-Prior to this, to generate the region value set, we would look for cases where the geocode district is blank, and then following this, to generate
-the EA value set, we would look for cases where the region and district match the selected codes and where the EA is defined.
-To generate the hierarchical value sets for the three levels of geography would require fairly different loops.
+Prior to this, to generate the region value set, we would look for cases where the geocode district is blank, and then following this, to generate the EA value set, we would look for cases where the region and district match the selected codes and where the EA is defined. To generate the hierarchical value sets for the three levels of geography would require fairly different loops.
 
 With the selcase automark trick, we can create a single function that can be used to generate the value set for each level of geography:
 
@@ -113,8 +104,7 @@ valueset </font><font color="black">geography_vs;<br />
 </font><font color="blue">end</font><font color="black">;</font>
 </div>
 
-We call this function from each procedure, specifying the currently selected geocode and the geocode length at each level. In this example, we
-assume that the region is length 1 and that the other two geocodes are length 2:
+We call this function from each procedure, specifying the currently selected geocode and the geocode length at each level. In this example, we assume that the region is length 1 and that the other two geocodes are length 2:
 
 <div style="margin: 0px; padding: 1em; border-radius: 3px; line-height: 1.5; font-family: 'Inconsolata', monospace; font-size: 10pt; color: rgb(51, 51, 51); background-color: rgb(232, 232, 232);">
     <font color="blue">PROC </font><font color="black">REGION<br />
