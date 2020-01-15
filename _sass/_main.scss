@@ -130,6 +130,19 @@ svg:not(:root) {
         border-bottom: 1px solid $border-color;
     }
 
+    #twitter-div {
+        height: 36px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../images/logos/twitter-black.png');
+
+        &:hover,
+        &:active  {
+            background-image: url('../../images/logos/twitter-white.png');
+        }
+     }
+
     a {
         text-decoration: none;
         color: $black;
@@ -147,12 +160,19 @@ svg:not(:root) {
         }
     }
 
-    @media screen and (min-width: 935px) {
+    @media screen and (min-width: 1090px) {
         li {
             width: 130px;
             border-bottom: none;
             display: inline-block;
             margin: 10px;
+        }
+
+        #twitter-div {
+            height: 24px;
+            display: inline-block;
+            position: relative;
+            top: 5px;
         }
 
         a {
@@ -314,3 +334,35 @@ h1 {
         font-size: 32px;
 	}
 }
+
+/*--- TABLES ----------------------------------------------------------------*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+        height: 36px;
+        padding: 10px;
+        text-align: left;
+        vertical-align: center;
+    }
+
+    tr:nth-child(even) {
+        background-color: $table-row;
+    }
+}
+
+.releases-table {
+    th, td {
+        height: 22px;
+        padding: 5px;
+    }
+}
+
+.remove-table-row-highlight {
+    tr:nth-child(even) {
+        background-color: $white;
+    }
+}
+
