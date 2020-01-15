@@ -32,6 +32,7 @@ Because selcase allows you to pass a key to match ("" in the example above, whic
 
 To show a possible use for this trick, we will look at two ways of creating hierarchical value sets for geocodes. Supposing we have three levels of geography&mdash;Region, District, and EA&mdash;one way to structure a geocode lookup file is as follows:
 
+{:.remove-table-row-highlight}
 | Region | District | EA  | Geocode Name |
 | ------ | -------- | --- | ------------ |
 | 1      |          |     | Region 1 |
