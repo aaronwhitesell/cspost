@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: posts
-title: "Why use ischecked instead of pos"
+title: "Why Use IsChecked Instead of Pos"
 tags: [Logic]
 date-string: April 8, 2020
 ---
