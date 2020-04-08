@@ -109,4 +109,4 @@ CSPro 7.4 greatly simplifies this check with the ischecked function. The ischeck
 </font>
 </div>
 
-The ichecked function returns a 0 (false) since “32” is not found within one of the uniformly spaced offsets. To do this CSPro requires the codes to be a uniform length. Notice all codes in this example were length 2.
+The ischecked function returns a 0 (false) since “32” is not found within one of the uniformly spaced offsets. To do this CSPro requires the codes to be a uniform length. Notice all codes in this example were length 2.
