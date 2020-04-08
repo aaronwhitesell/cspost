@@ -8,7 +8,7 @@ date-string: April 8, 2020
 
 CSPro 7.4 has a new function [ischecked](https://www.csprousers.org/help/CSPro/ischecked_function.html){:target="_blank"}. This function returns whether a code is part of a check box field's selections. Prior to CSPro 7.4 we would use the [pos](https://www.csprousers.org/help/CSPro/pos_function.html){:target="_blank"} function. So why use the ischecked function rather than the pos function?
 
-## Issue with the pos function
+## Issue with the Pos Function
 
 Let’s look at how the LANGUAGE_SPOKEN variable would be set up. Since a person could speak multiple languages we will use a check box and the language question might look like:
 
@@ -95,7 +95,7 @@ The pos function does not look by offset, but instead looks for a substring matc
 </font><font color="blue">endif</font><font color="black">;</font>
 </div>
 
-## Moving forward with the ischecked function
+## Moving Forward with the IsChecked Function
 
 CSPro 7.4 greatly simplifies this check with the ischecked function. The ischecked function checks for the codes at the appropriate offsets, in this case the function checks positions 1-2, 3-4, 5-6, 7-8, ..., 19-29 for the code “32”. To check for Bengali we simply use:
 
