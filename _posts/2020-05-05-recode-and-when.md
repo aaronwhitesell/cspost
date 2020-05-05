@@ -42,7 +42,8 @@ Let us implement the above consistency check using the new recode syntax. Note t
 &nbsp; &nbsp; </font><font color="blue">endrecode</font><font color="black">;<br />
 <br />
 &nbsp; &nbsp; </font><font color="blue">if </font><font color="black">P18_BORN &gt; maxBorn </font><font color="blue">then<br />
-&nbsp; &nbsp; &nbsp; &nbsp; errmsg</font><font color="black">(</font><font color="fuchsia">"Number of children born(=%d) exceeds maximum allowed(=%d) for woman's age(=%d)"</font><font color="black">, P18_BORN, maxBorn, P04_AGE);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; errmsg</font><font color="black">(</font><font color="fuchsia">"Number of children born(=%d) exceeds maximum allowed(=%d) for woman's age(=%d)"<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="black">, P18_BORN, maxBorn, P04_AGE);<br />
 &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="blue">reenter</font><font color="black">;<br />
 &nbsp; &nbsp; </font><font color="blue">endif</font><font color="black">;</font>
 </div>
@@ -71,7 +72,8 @@ Now let us implement the consistency check using the new when statement.
 &nbsp; &nbsp; </font><font color="blue">endwhen</font><font color="black">;<br />
 <br />
 &nbsp; &nbsp; </font><font color="blue">if </font><font color="black">P18_BORN &gt; maxBorn </font><font color="blue">then<br />
-&nbsp; &nbsp; &nbsp; &nbsp; errmsg</font><font color="black">(</font><font color="fuchsia">"Number of children born(=%d) exceeds maximum allowed(=%d) for woman's age(=%d)"</font><font color="black">, P18_BORN, maxBorn, P04_AGE);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; errmsg</font><font color="black">(</font><font color="fuchsia">"Number of children born(=%d) exceeds maximum allowed(=%d) for woman's age(=%d)"<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="black">, P18_BORN, maxBorn, P04_AGE);<br />
 &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="blue">reenter</font><font color="black">;<br />
 &nbsp; &nbsp; </font><font color="blue">endif</font><font color="black">;</font>
 </div>
@@ -110,7 +112,8 @@ The when statement allows us to combine variables. We can remove the ask if and 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; errmsg</font><font color="black">(</font><font color="fuchsia">"P18_BORN(=%d) &nbsp;must be notappl for a female age &lt; 12"</font><font color="black">, P18_BORN);<br />
 &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="blue">else<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if NOT </font><font color="black">P18_BORN </font><font color="blue">in </font><font color="red">0</font><font color="black">:maxBorn </font><font color="blue">then<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; errmsg</font><font color="black">(</font><font color="fuchsia">"Number of children born(=%d) not valid for sex %d age %d"</font><font color="black">, P18_BORN, P03_SEX, P04_AGE);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; errmsg</font><font color="black">(</font><font color="fuchsia">"Number of children born(=%d) not valid for sex %d age %d"<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="black">, P18_BORN, P03_SEX, P04_AGE);<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="blue">reenter</font><font color="black">;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="blue">endif</font><font color="black">;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="blue">endif</font><font color="black">;<br />
