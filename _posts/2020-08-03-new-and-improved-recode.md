@@ -6,7 +6,7 @@ tags: [Logic]
 date-string: July 29, 2020
 ---
 
-CSPro 7.4 has a revised [recode](https://www.csprousers.org/help/CSPro/recode_statement.html) statement. The old [recode](https://www.csprousers.org/help/CSPro/recode_statement_pre74.html) will be deprecated in a future version of CSPro. To look at the differences between the old and new recode let us compare implementations of the consistency check below with a universe of *age >= 3 and currently attending school*.
+CSPro 7.4 has a revised [recode](https://www.csprousers.org/help/CSPro/recode_statement.html) statement. The old [recode](https://www.csprousers.org/help/CSPro/recode_statement_pre74.html) will be deprecated in a future version of CSPro. To look at the differences between the old and new recode let us compare implementations of the consistency check below.
 
 | Grade | Minimum age | Maximum age | Notes                              |
 | ----- | ------------|-------------|------------------------------------|
