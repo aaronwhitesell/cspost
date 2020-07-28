@@ -6,7 +6,7 @@ tags: [Logic]
 date-string: July 29, 2020
 ---
 
-CSPro 7.4 has a revised [recode](https://www.csprousers.org/help/CSPro/recode_statement.html) statement. The old [recode](https://www.csprousers.org/help/CSPro/recode_statement_pre74.html) will be deprecated in a future version of CSPro. To look at the difference between the old and new recode let us compare implementations of the consistency check below with a universe of *age >= 3 and currently attending school*.
+CSPro 7.4 has a revised [recode](https://www.csprousers.org/help/CSPro/recode_statement.html) statement. The old [recode](https://www.csprousers.org/help/CSPro/recode_statement_pre74.html) will be deprecated in a future version of CSPro. To look at the differences between the old and new recode let us compare implementations of the consistency check below with a universe of *age >= 3 and currently attending school*.
 
 | Grade | Minimum age | Maximum age | Notes                              |
 | ----- | ------------|-------------|------------------------------------|
@@ -88,7 +88,7 @@ Using the old recode syntax you will need two recode statements. One for the min
 &nbsp; &nbsp; </font><font color="blue">endif</font><font color="black">;</font>
 </div>
 
-## Syntax Differences Between Old and New Recode
+## Syntax Change Between Old and New Recode
 
 | Operator   | Old Recode Syntax | New Recode Syntax |
 |------------|-------------------|-------------------|
@@ -96,7 +96,7 @@ Using the old recode syntax you will need two recode statements. One for the min
 | And        | :                 | ::                |
 | Range      | -                 | :                 |
 
-## New and Improved Recode Implementation
+## New Recode Implementation
 
 With this new recode statement you can determine the minimum and maximum ages within a single recode.
 
@@ -140,7 +140,7 @@ With this new recode statement you can determine the minimum and maximum ages wi
 
 ### Flag Implementation
 
-Another approach is to create a test flag. In the logic below, grade_is_valid is used to show whether or not the combination grades and ages are valid. This can make the logic easier to interpret and modify.
+Another approach is to create a test flag. In the logic below, **grade_is_valid** is used to show whether or not the combination of grades and ages are valid. This can make the logic easier to interpret and modify.
 
 <div style="margin: 0px; padding: 1em; border-radius: 3px; line-height: 1.5; font-family: 'Inconsolata', monospace; font-size: 10pt; color: rgb(51, 51, 51); background-color: rgb(232, 232, 232);">
 	<font color="blue">PROC </font><font color="black">P10_GRADE_NOW_ATTENDING<br />
