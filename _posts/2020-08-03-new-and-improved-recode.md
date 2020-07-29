@@ -8,24 +8,7 @@ date-string: July 29, 2020
 
 CSPro 7.4 has a revised [recode](https://www.csprousers.org/help/CSPro/recode_statement.html) statement. The old [recode](https://www.csprousers.org/help/CSPro/recode_statement_pre74.html) will be deprecated in a future version of CSPro. To look at the differences between the old and new recode let us compare implementations of the consistency check below.
 
-| Grade | Minimum age | Maximum age | Notes                              |
-| ----- | ------------|-------------|------------------------------------|
-| 0     | 3           | 6           | Preschool and kindergarten         |
-| 1     | 5           | 8           |                                    |
-| 2     | 6           | 9           |                                    |
-| 3     | 7           | 10          |                                    |
-| 4     | 8           | 11          |                                    |
-| 5     | 9           | 12          |                                    |
-| 6     | 10          | 13          |                                    |
-| 7     | 11          | 14          |                                    |
-| 8     | 12          | 15          |                                    |
-| 9     | 13          | 18          |                                    |
-| 10    | 14          | 20          |                                    |
-| 11    | 15          | 21          |                                    |
-| 12    | 16          | 22          |                                    |
-| 13    | 16          | 95          | University but not graduate school |
-| 14    | 18          | 95          | Graduate school                    |
-| 15    | 15          | 95          | Trade or technical school          |
+![alt text]({{ site.baseurl }}/images/posts/2020-08-03/current-grade-attending-specification.png "Specification")
 
 ## Old Recode Implementation
 
