@@ -10,13 +10,13 @@ CSPro 7.4 has introduced a new and improved [recode](https://www.csprousers.org/
 
 ## Specification
 
-For those currently attending school you will want to check that a person in a given grade is within a specific age range. Here is the specification.
+The goal of the two recode implementations will be to verify that students currently attending school are within the allowable age range for their grade. The specfication below defines the valid combination of grades and ages.
 
 ![alt text]({{ site.baseurl }}/images/posts/2020-08-03/current-grade-attending-specification.png "Specification")
 
 ## Old Recode Implementation
 
-Using the old recode syntax you will need two recode statements. One for the minimum age and another for the maximum age.
+Using the old recode syntax notice that you will need two recode statements. One for the minimum age and another for the maximum age.
 
 <div style="margin: 0px; padding: 1em; border-radius: 3px; line-height: 1.5; font-family: 'Inconsolata', monospace; font-size: 10pt; color: rgb(51, 51, 51); background-color: rgb(232, 232, 232);">
 	<font color="blue">PROC </font><font color="black">P10_GRADE_NOW_ATTENDING<br />
@@ -127,7 +127,7 @@ With this new recode statement you can determine the minimum and maximum ages wi
 &nbsp; &nbsp; </font><font color="blue">endif</font><font color="black">;</font>
 </div>
 
-### Flag Implementation
+## Flag Implementation
 
 Another approach is to create a test flag. In the logic below, **grade_is_valid** is used to show whether or not the combination of grades and ages are valid. This can further increase the readability of your logic.
 
