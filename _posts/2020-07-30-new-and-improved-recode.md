@@ -6,7 +6,7 @@ tags: [Logic]
 date-string: July 30, 2020
 ---
 
-CSPro 7.4 has introduced a new and improved [recode](https://www.csprousers.org/help/CSPro/recode_statement.html) statement that will allow you to get more done in a single recode. To see the differences between the old and new recode you will compare implementations of a typical education edit. Note that the old [recode](https://www.csprousers.org/help/CSPro/recode_statement_pre74.html) has been deprecated.
+CSPro 7.4 has introduced a new and improved [recode](https://www.csprousers.org/help/CSPro/recode_statement.html){:target="_blank"} statement that will allow you to get more done in a single recode. To see the differences between the old and new recode you will compare implementations of a typical education edit. Note that the old [recode](https://www.csprousers.org/help/CSPro/recode_statement_pre74.html){:target="_blank"} has been deprecated.
 
 ## Specification
 
