@@ -3,7 +3,7 @@ layout: post
 categories: posts
 title: "New and Improved Recode"
 tags: [Logic]
-date-string: July 29, 2020
+date-string: July 30, 2020
 ---
 
 CSPro 7.4 has introduced a new and improved [recode](https://www.csprousers.org/help/CSPro/recode_statement.html) statement that will allow you to get more done in a single recode. To see the differences between the old and new recode you will compare implementations of a typical education edit. Note that the old [recode](https://www.csprousers.org/help/CSPro/recode_statement_pre74.html) has been deprecated.
@@ -12,7 +12,7 @@ CSPro 7.4 has introduced a new and improved [recode](https://www.csprousers.org/
 
 The goal of the two recode implementations will be to verify that students currently attending school are within the allowable age range for their grade. The specfication below defines the valid combination of grades and ages.
 
-![alt text]({{ site.baseurl }}/images/posts/2020-08-03/current-grade-attending-specification.png "Specification")
+![alt text]({{ site.baseurl }}/images/posts/2020-07-30/current-grade-attending-specification.png "Specification")
 
 ## Old Recode Implementation
 
@@ -116,7 +116,7 @@ With this new recode statement you can determine the minimum and maximum ages wi
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">12 </font><font color="black">-&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">16 </font><font color="black">:: </font><font color="red">22</font><font color="black">;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">13 </font><font color="black">-&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">16 </font><font color="black">:: </font><font color="red">95</font><font color="black">;</font><font color="green"> // University but not graduate school<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">14 </font><font color="black">-&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">18 </font><font color="black">:: </font><font color="red">95</font><font color="black">;</font><font color="green"> // Graduate school<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">15 </font><font color="black">-&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">15 </font><font color="black">:: </font><font color="red">5</font><font color="black">;</font><font color="green"> &nbsp;// Trade or technical school<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">15 </font><font color="black">-&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="red">15 </font><font color="black">:: </font><font color="red">95</font><font color="black">;</font><font color="green"> // Trade or technical school<br />
 &nbsp; &nbsp; </font><font color="blue">endrecode</font><font color="black">;<br />
 <br />
 &nbsp; &nbsp; </font><font color="blue">if </font><font color="black">P04_AGE </font><font color="blue">in </font><font color="black">minAgeForGrade:maxAgeForGrade </font><font color="blue">then<br />
